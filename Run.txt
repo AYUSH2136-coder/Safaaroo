@@ -1,0 +1,60 @@
+
+====================================================================
+               LOCATION TRACKER POC - STARTUP GUIDE
+====================================================================
+
+PROJECT STRUCTURE:
+------------------
+location-tracker-poc/
+├── backend/       (Express server, Socket.IO, API routes)
+└── frontend/      (React Vite app)
+
+
+STEP 1: BUILD THE FRONTEND
+--------------------------
+* Perform this step whenever you make changes to the React code.
+
+1. Open Terminal 1 and navigate to the frontend directory:
+   cd "F:\Programming\SIH (2025)\Tracking System\location-tracker-poc\frontend"
+
+2. Generate production static files:
+   npm run build
+
+
+STEP 2: START THE BACKEND SERVER
+--------------------------------
+1. In Terminal 1, navigate to the backend directory:
+   cd "F:\Programming\SIH (2025)\Tracking System\location-tracker-poc\backend"
+
+2. Start the unified Express & Socket.IO server:
+   npm run dev
+
+3. Verify log output:
+   "🚀 Unified Server listening on port 5000"
+
+
+STEP 3: LAUNCH NGROK TUNNEL
+---------------------------
+1. Open Terminal 2 (a separate terminal window).
+
+2. Terminate any stale ngrok background processes:
+   taskkill /F /IM ngrok.exe
+
+   May be some time "ERROR: The process "ngrok.exe" not found." it is normal you can goo on 
+
+3. Expose backend port 5000 using IPv4:
+   ngrok http http://127.0.0.1:5000
+
+
+STEP 4: VERIFY AND ACCESS
+-------------------------
+1. Copy the ngrok URL (e.g., https://upstroke-foyer-untaxed.ngrok-free.dev).
+
+2. Mobile (Transmitter):
+   - Open ngrok URL in mobile browser.
+   - Select Transmitter Mode -> Start Transmitting.
+
+3. PC (Receiver):
+   - Open ngrok URL or http://localhost:5000 in PC browser.
+   - Select Receiver Mode to view real-time location stream.
+====================================================================

@@ -1,0 +1,62 @@
+# Environments
+.env
+.env.*
+!.env.example
+!.env.local.example
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+build/
+coverage/
+
+# Android
+**/.gradle/
+**/local.properties
+**/captures/
+**/generated/
+*.jks
+*.keystore
+
+# iOS
+**/Pods/
+**/.symlinks/
+**/Flutter/ephemeral/
+**/Flutter/App.framework
+**/Flutter/Flutter.framework
+**/Flutter/Generated.xcconfig
+
+# IDEs and OS
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Databases (SQLite)
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.sqlite3-journal
+backend/dev.db
+
+# Logs
+*.log
+
+# Other caches and build outputs
+dist/
+out/
+*.bak
