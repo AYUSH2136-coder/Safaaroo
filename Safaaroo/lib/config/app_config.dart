@@ -34,7 +34,7 @@ class AppConfig {
   static const int locationDistanceFilter = 5; // metres
 
   // ─── Mapbox ───────────────────────────────────────────────────────────
-  static const String mapboxAccessToken =
-      String.fromEnvironment('MAPBOX_ACCESS_TOKEN', defaultValue: '');
+  static const String mapboxAccessToken = String.fromEnvironment(
+      'MAPBOX_ACCESS_TOKEN', defaultValue: '');
   static const String mapboxStyleUrl = 'mapbox://styles/mapbox/light-v11';
 }
